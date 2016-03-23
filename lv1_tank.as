@@ -1,0 +1,74 @@
+﻿package  {
+	
+	import flash.display.MovieClip;
+	
+	
+	public class lv1_tank extends MovieClip implements models {
+		private var health:int =1;
+		private var dir_local:int;
+		public function lv1_tank() {
+			// constructor code
+		}
+		public function setP(xx:int, yy:int):void{
+			x=xx;
+			y=yy;
+		}
+	    public function setspeed(xx:int,yy:int){
+			
+		}
+		public function setDir(direct:int):void{
+			if(dir_local==0){  //0 right 1 up 2 left 3 down
+				if(direct==1){
+					  rotation=180;
+					  rotation=90;
+					}
+				if(direct==2){
+					  rotation=180;
+					}
+				if(direct==3){
+					  rotation=90;
+					}
+			} // 0 means right;
+			if(dir_local==1){
+				if(direct==0){
+					 
+					  rotation=90;
+					}
+				if(direct==2){
+					  rotation=180;
+					  rotation=90;
+					}
+				if(direct==3){
+					  rotation=180;
+					}
+			} // 1 means up;
+			if(dir_local==2){
+				if(direct==0){ 
+					  rotation=180;
+					}
+				if(direct==1){
+					  rotation=90;
+					}
+				if(direct==3){
+					  rotation=180;
+					  rotation=90;
+					}
+			} // 2 means left;
+			
+			if(dir_local==3){
+				if(direct==0){ 
+					  rotation=180;
+					  rotation=90;
+					}
+				if(direct==1){
+					  rotation=180;
+					}
+				if(direct==2){
+					  rotation=90;
+					}
+			} // 2 means left;
+		}
+	}
+	}
+	
+
